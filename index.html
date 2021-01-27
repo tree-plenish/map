@@ -11,7 +11,18 @@
         <style>
             #mapid {
                 height:800px;
-                
+            }
+            .info {
+                padding: 6px 8px;
+                font: 14px/16px Arial, Helvetica, sans-serif;
+                background: white;
+                background: rgba(255,255,255,0.8);
+                box-shadow: 0 0 15px rgba(0,0,0,0.2);
+                border-radius: 5px;
+            }
+            .info h4 {
+                margin: 0 0 5px;
+                color: #777;
             }
         </style>
     </head>
@@ -44,7 +55,7 @@
                     opacity: 1,
                     color: 'white',
                     dashArray: '3',
-                    fillOpacity: 0.7
+                    fillOpacity: 0.85
                 };
             }
             
@@ -53,7 +64,7 @@
 
                 layer.setStyle({
                     weight: 5,
-                    color: '#00ff00',
+                    color: '#a9a9a9',
                     dashArray: '',
                     fillOpacity: 0.7
                 });
@@ -61,22 +72,57 @@
                 if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
                     layer.bringToFront();
                 }
+
+                //info.update(layer.feature.properties);
             }     
             function resetHighlight(e) {
                 geoJson.resetStyle(e.target);
+                //info.update();
+                return;
             }
 
             function onEachFeature(feature, layer) {
                 layer.on({
                     mouseover: highlightFeature,
-                    mouseout: resetHighlight             
+                    mouseout: resetHighlight,
+                    click: clickedFeature          
                 });
+
             }
 
+            function clickedFeature(e){
+                geoJson.resetStyle()
+                highlightFeature(e)
+                var layer = e.target;
+                info.update(layer.feature.properties)
+
+            }
+
+            var info = L.control();
+            
+            info.onAdd = function (map) {
+                this._div = L.DomUtil.create('div', 'info');
+                this.update();
+                return this._div;
+            };
+
+            function buildHTML(schoolList){
+                var theSchools = "";
+                schoolList.forEach(school => theSchools = theSchools + school + '<br>');
+                return theSchools;
+            }
+
+            info.update = function (props) {
+                this._div.innerHTML = '<h4>Schools:</h4>' +  (props ?
+                '<p>' + buildHTML(props.SCHOOLS) + '</p>'
+                : 'Hover over a state');
+            };
+            
             var geoJson = L.geoJson(statesData, {style: style, onEachFeature: onEachFeature}).addTo(theMap);
 
             TPmarker.bindPopup("<b>Tree-Plenish HQ</b>").openPopup();
             
+            info.addTo(theMap);
         </script>
     </body>
 </html>
