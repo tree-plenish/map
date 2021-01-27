@@ -7,6 +7,7 @@
         <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossorigin=""></script>
+        <script src='states.js'></script>
         <style>
             #mapid {
                 height:800px;
@@ -28,13 +29,31 @@
                 accessToken: 'pk.eyJ1Ijoiamg0MzM3IiwiYSI6ImNra2FqcTQzYTAza2oydW5hajM1cHpsZm0ifQ.8ulGEQ6aT3YmGoHNqeV83Q'
             }).addTo(theMap);
             
-            const tpIcon = L.icon({
-                iconURL: 'tpIcon.png',
-                iconSize: [38,95],
-                iconAnchor: [22,94]
-            });
+            var TPmarker = L.marker([42.0335,-71.2191]).addTo(theMap);
+
+            L.geoJson(statesData).addTo(theMap);
+
+            function getColor(d) {
+                return d > 6 ? '#31a354':
+                       d > 2  ? '#a1d99b':
+                                '#e5f5e0';
+            }
+
+            function style(feature) {
+                return {
+                    fillColor: getColor(feature.properties.NUMSCHOOLS),
+                    weight: 2,
+                    opacity: 1,
+                    color: 'white',
+                    dashArray: '3',
+                    fillOpacity: 0.7
+                };
+            }
             
-            L.marker([42.0335,-71.2191]).addTo(theMap);
+            L.geoJson(statesData, {style: style}).addTo(theMap);
+
+            TPmarker.bindPopup("<b>Tree-Plenish HQ</b>").openPopup();
+            
 
         </script>
     </body>

@@ -21,18 +21,33 @@ for state in all_states:
 	else:
 		state_frequency[state] = 1
 
+frequencies = list(state_frequency.values())
+firstQuart = np.percentile(frequencies, 25)
+thirdQuart = np.percentile(frequencies, 75)
+
+str1 = 'var firstQuartile = ' + str(firstQuart) + ';'
+str2 = 'var thirdQuartile = ' + str(thirdQuart) + ';'
 #adding the frequency variable from this 50 states json
 with open('states.json', 'r') as f:
 	states_geo = json.load(f)
 	for state in states_geo['features']:
 		if(state['properties']['NAME'] in state_frequency.keys()):
 			state['properties']['NUMSCHOOLS'] = state_frequency[state['properties']['NAME']]
+		else:
+			state['properties']['NUMSCHOOLS'] = 0
 
 with open('newStates.json', 'w') as f:
+	f.write('var statesData = ')
 	json.dump(states_geo, f, indent=4)
+	f.write(';')
+	f.write('\n')
+	f.write(str1)
+	f.write('\n')
+	f.write(str2)
 
-os.remove('states.json')
-os.rename('newStates.json', 'states.json')
+os.rename('newStates.json', 'states.js')
+
+
 
 
 
