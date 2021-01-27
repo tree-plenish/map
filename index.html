@@ -31,8 +31,6 @@
             
             var TPmarker = L.marker([42.0335,-71.2191]).addTo(theMap);
 
-            L.geoJson(statesData).addTo(theMap);
-
             function getColor(d) {
                 return d > thirdQuartile ? '#31a354':
                        d > firstQuartile  ? '#a1d99b':
@@ -50,11 +48,35 @@
                 };
             }
             
-            L.geoJson(statesData, {style: style}).addTo(theMap);
+            function highlightFeature(e) {
+                var layer = e.target;
+
+                layer.setStyle({
+                    weight: 5,
+                    color: '#00ff00',
+                    dashArray: '',
+                    fillOpacity: 0.7
+                });
+
+                if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+                    layer.bringToFront();
+                }
+            }     
+            function resetHighlight(e) {
+                geoJson.resetStyle(e.target);
+            }
+
+            function onEachFeature(feature, layer) {
+                layer.on({
+                    mouseover: highlightFeature,
+                    mouseout: resetHighlight             
+                });
+            }
+
+            var geoJson = L.geoJson(statesData, {style: style, onEachFeature: onEachFeature}).addTo(theMap);
 
             TPmarker.bindPopup("<b>Tree-Plenish HQ</b>").openPopup();
             
-
         </script>
     </body>
 </html>

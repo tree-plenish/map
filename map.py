@@ -10,31 +10,37 @@ spreadsheetPath = '/Users/joyhe208/desktop/tree-plenish/demographics/stats.html'
 demographics = pd.read_html(spreadsheetPath)[0]
 
 #dataframe with just the states of each school
-all_states = demographics.loc[:,'B'].drop([0],axis=0)
+all_states = demographics.loc[:,['A', 'B']].drop([0],axis=0)
 
-state_frequency = {}
+state_data = {}
 
 #generating dictionary with state and number of schools in that state
-for state in all_states:
-	if(state in state_frequency.keys()):
-		state_frequency[state] = state_frequency[state]+1
+for state in all_states.itertuples():
+	if(state[2] in state_data.keys()):
+		state_data[state[2]]['NumSchools'] = state_data[state[2]]['NumSchools']+1
+		state_data[state[2]]['Schools'].append(state[1])
 	else:
-		state_frequency[state] = 1
+		state_data[state[2]]={'NumSchools': 1, 'Schools': []}
+		state_data[state[2]]['Schools'].append(state[1])
+#print(state_data)
 
-frequencies = list(state_frequency.values())
+frequencies = [state_data[state]['NumSchools'] for state in state_data.keys()]
 firstQuart = np.percentile(frequencies, 25)
 thirdQuart = np.percentile(frequencies, 75)
 
 str1 = 'var firstQuartile = ' + str(firstQuart) + ';'
 str2 = 'var thirdQuartile = ' + str(thirdQuart) + ';'
+
 #adding the frequency variable from this 50 states json
 with open('states.json', 'r') as f:
 	states_geo = json.load(f)
 	for state in states_geo['features']:
-		if(state['properties']['NAME'] in state_frequency.keys()):
-			state['properties']['NUMSCHOOLS'] = state_frequency[state['properties']['NAME']]
+		if(state['properties']['NAME'] in state_data.keys()):
+			state['properties']['NUMSCHOOLS'] = state_data[state['properties']['NAME']]['NumSchools']
+			state['properties']['SCHOOLS'] = state_data[state['properties']['NAME']]['Schools']
 		else:
 			state['properties']['NUMSCHOOLS'] = 0
+			state['properties']['SCHOOLS'] = []
 
 with open('newStates.json', 'w') as f:
 	f.write('var statesData = ')
