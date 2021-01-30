@@ -51,7 +51,8 @@ with open('newStates.json', 'w') as f:
 	f.write('\n')
 	f.write(str2)
 
-os.rename('newStates.json', 'states.js')
+os.rename('newStates.json', './static/states.js')
+
 
 
 
