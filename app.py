@@ -13,5 +13,9 @@ def school():
     schoolName = request.args["school"]
     return render_template("school.html", name=schoolName)
 
+@app.route('/analytics')
+def analytics():
+    return render_template("analytics.html")
+
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0')

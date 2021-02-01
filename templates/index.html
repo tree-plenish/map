@@ -4,6 +4,7 @@
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
         integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
         crossorigin=""/>
+        <link rel="stylesheet" href="../static/style.css"/>
         <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossorigin=""></script>
@@ -14,7 +15,7 @@
             }
             .info {
                 padding: 6px 8px;
-                font: 14px/16px Arial, Helvetica, sans-serif;
+                font: 14px/16px Helvetica, sans-serif;
                 background: white;
                 background: rgba(255,255,255,0.8);
                 box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -26,14 +27,21 @@
             }
             .schoolLink{
                 transition: text-decoration .5s;
+                cursor: pointer;
             }
 
             .schoolLink:hover{
                 text-decoration: underline;
             }
+           
         </style>
     </head>
     <body>
+        <div class="header">
+            <div class="tree-plenish" style="padding:5px;margin-right:1075px;color:white;background-color:#31a354;">Tree-Plenish.</div>
+            <div class = "headertext" style="padding: 5px;color:white;" onclick='javascript:window.location.href=`index`;'>Home</div>
+            <div class = "headertext" style="padding: 5px;margin-right:10px;margin-left:10px;color:white;" onclick='javascript:window.location.href=`analytics`;'>Analytics</div>
+        </div>
         <div id="mapid"></div>
         <script>
             

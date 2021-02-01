@@ -1,0 +1,23 @@
+.header{
+    display: flex;
+    padding: 15px;
+    background-color: #a1d99b;;
+    font: 20px Arial, Helvetica, sans-serif;
+    justify-content: flex-end;
+    border-radius: 5px;
+}
+.headertext{
+    transition: text-decoration .5s;
+    transition: text-color .5s;
+    cursor: pointer;
+    margin-top:3px;
+}
+.headertext:hover{
+    text-decoration: underline;
+    color: black;
+}
+.tree-plenish{
+    border-radius: 3px;
+    border: 3px solid;
+    border-color: #31a354;
+}
