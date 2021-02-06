@@ -1,0 +1,437 @@
+{
+    "Summit High School": {
+        "Tree Requests": "148",
+        "Tree Goal": "187",
+        "Tree Progress": "79.14%"
+    },
+    "Carmel High School": {
+        "Tree Requests": "523",
+        "Tree Goal": "1500",
+        "Tree Progress": "34.87%"
+    },
+    "Evanston Township High School": {
+        "Tree Requests": "170",
+        "Tree Goal": "280",
+        "Tree Progress": "60.71%"
+    },
+    "Knight High School": {
+        "Tree Requests": "399",
+        "Tree Goal": "225",
+        "Tree Progress": "177.33%"
+    },
+    "Kennedy High School": {
+        "Tree Requests": "116",
+        "Tree Goal": "180",
+        "Tree Progress": "64.44%"
+    },
+    "Oakland Tech/East Bay": {
+        "Tree Requests": "312",
+        "Tree Goal": "141",
+        "Tree Progress": "221.28%"
+    },
+    "Arlington (MA) High School": {
+        "Tree Requests": "96",
+        "Tree Goal": "225",
+        "Tree Progress": "42.67%"
+    },
+    "Pasadena High School": {
+        "Tree Requests": "77",
+        "Tree Goal": "200",
+        "Tree Progress": "38.50%"
+    },
+    "Newtown High School": {
+        "Tree Requests": "66",
+        "Tree Goal": "300",
+        "Tree Progress": "22.00%"
+    },
+    "Nipmuc Regional High School": {
+        "Tree Requests": "164",
+        "Tree Goal": "150",
+        "Tree Progress": "109.33%"
+    },
+    "Midwood High School": {
+        "Tree Requests": "38",
+        "Tree Goal": "115",
+        "Tree Progress": "33.04%"
+    },
+    "Bethesda-Chevy Chase High School": {
+        "Tree Requests": "188",
+        "Tree Goal": "240",
+        "Tree Progress": "78.33%"
+    },
+    "Troy High School": {
+        "Tree Requests": "6",
+        "Tree Goal": "270",
+        "Tree Progress": "2.22%"
+    },
+    "Reading High School": {
+        "Tree Requests": "254",
+        "Tree Goal": "290",
+        "Tree Progress": "87.59%"
+    },
+    "University High School": {
+        "Tree Requests": "16",
+        "Tree Goal": "58",
+        "Tree Progress": "27.59%"
+    },
+    "Portsmouth High School": {
+        "Tree Requests": "254",
+        "Tree Goal": "200",
+        "Tree Progress": "127.00%"
+    },
+    "Melrose High School": {
+        "Tree Requests": "108",
+        "Tree Goal": "250",
+        "Tree Progress": "43.20%"
+    },
+    "Cherry Creek High School": {
+        "Tree Requests": "111",
+        "Tree Goal": "405",
+        "Tree Progress": "27.41%"
+    },
+    "East High School": {
+        "Tree Requests": "73",
+        "Tree Goal": "300",
+        "Tree Progress": "24.33%"
+    },
+    "Glenbard South High School": {
+        "Tree Requests": "11",
+        "Tree Goal": "180",
+        "Tree Progress": "6.11%"
+    },
+    "Cranston High School East": {
+        "Tree Requests": "15",
+        "Tree Goal": "300",
+        "Tree Progress": "5.00%"
+    },
+    "LaGuardia High School": {
+        "Tree Requests": "101",
+        "Tree Goal": "250",
+        "Tree Progress": "40.40%"
+    },
+    "Thomas Jefferson High School": {
+        "Tree Requests": "50",
+        "Tree Goal": "113",
+        "Tree Progress": "44.25%"
+    },
+    "South High School": {
+        "Tree Requests": "48",
+        "Tree Goal": "200",
+        "Tree Progress": "24.00%"
+    },
+    "Jones College Prep": {
+        "Tree Requests": "12",
+        "Tree Goal": "115",
+        "Tree Progress": "10.43%"
+    },
+    "Barrington High School": {
+        "Tree Requests": "361",
+        "Tree Goal": "200",
+        "Tree Progress": "180.50%"
+    },
+    "Glencoe High School": {
+        "Tree Requests": "89",
+        "Tree Goal": "165",
+        "Tree Progress": "53.94%"
+    },
+    "Northern High School": {
+        "Tree Requests": "63",
+        "Tree Goal": "225",
+        "Tree Progress": "28.00%"
+    },
+    "Benito Juarez Community Academy": {
+        "Tree Requests": "1",
+        "Tree Goal": "200",
+        "Tree Progress": "0.50%"
+    },
+    "Amherst Regional High School": {
+        "Tree Requests": "26",
+        "Tree Goal": "230",
+        "Tree Progress": "11.30%"
+    },
+    "Glenelg High School": {
+        "Tree Requests": "197",
+        "Tree Goal": "200",
+        "Tree Progress": "98.50%"
+    },
+    "High School of American Studies": {
+        "Tree Requests": "83",
+        "Tree Goal": "110",
+        "Tree Progress": "75.45%"
+    },
+    "Exeter-West Greenwich Regional High School": {
+        "Tree Requests": "199",
+        "Tree Goal": "350",
+        "Tree Progress": "56.86%"
+    },
+    "Ursuline Academy": {
+        "Tree Requests": "50",
+        "Tree Goal": "140",
+        "Tree Progress": "35.71%"
+    },
+    "Bermudian Springs High School": {
+        "Tree Requests": "181",
+        "Tree Goal": "130",
+        "Tree Progress": "139.23%"
+    },
+    "Leon M. Goldstein High School": {
+        "Tree Requests": "188",
+        "Tree Goal": "100",
+        "Tree Progress": "188.00%"
+    },
+    "Deerfield High School": {
+        "Tree Requests": "56",
+        "Tree Goal": "315",
+        "Tree Progress": "17.78%"
+    },
+    "St. Mary's Academy": {
+        "Tree Requests": "173",
+        "Tree Goal": "150",
+        "Tree Progress": "115.33%"
+    },
+    "Denver School of the Arts": {
+        "Tree Requests": "1",
+        "Tree Goal": "150",
+        "Tree Progress": "0.67%"
+    },
+    "West Orange High School": {
+        "Tree Requests": "112",
+        "Tree Goal": "243",
+        "Tree Progress": "46.09%"
+    },
+    "Arlington (NY) High School": {
+        "Tree Requests": "79",
+        "Tree Goal": "250",
+        "Tree Progress": "31.60%"
+    },
+    "St. Helen's High School": {
+        "Tree Requests": "92",
+        "Tree Goal": "115",
+        "Tree Progress": "80.00%"
+    },
+    "Lakes Community High School": {
+        "Tree Requests": "264",
+        "Tree Goal": "220",
+        "Tree Progress": "120.00%"
+    },
+    "Haddon Township High School": {
+        "Tree Requests": "49",
+        "Tree Goal": "165",
+        "Tree Progress": "29.70%"
+    },
+    "King College Prep High School": {
+        "Tree Requests": "15",
+        "Tree Goal": "100",
+        "Tree Progress": "15.00%"
+    },
+    "Whitney High School": {
+        "Tree Requests": "98",
+        "Tree Goal": "110",
+        "Tree Progress": "89.09%"
+    },
+    "New Canaan High School": {
+        "Tree Requests": "132",
+        "Tree Goal": "275",
+        "Tree Progress": "48.00%"
+    },
+    "Essex High School": {
+        "Tree Requests": "41",
+        "Tree Goal": "270",
+        "Tree Progress": "15.19%"
+    },
+    "Hawken School": {
+        "Tree Requests": "166",
+        "Tree Goal": "200",
+        "Tree Progress": "83.00%"
+    },
+    "Franklin High School": {
+        "Tree Requests": "18",
+        "Tree Goal": "240",
+        "Tree Progress": "7.50%"
+    },
+    "Advanced Math and Science Academy": {
+        "Tree Requests": "50",
+        "Tree Goal": "240",
+        "Tree Progress": "20.83%"
+    },
+    "Robbinsville High School": {
+        "Tree Requests": "69",
+        "Tree Goal": "140",
+        "Tree Progress": "49.29%"
+    },
+    "Kent-Meridian High School": {
+        "Tree Requests": "11",
+        "Tree Goal": "135",
+        "Tree Progress": "8.15%"
+    },
+    "D'Evelyn Junior/Senior High School": {
+        "Tree Requests": "12",
+        "Tree Goal": "200",
+        "Tree Progress": "6.00%"
+    },
+    "Scotch Plains-Fanwood High School": {
+        "Tree Requests": "26",
+        "Tree Goal": "240",
+        "Tree Progress": "10.83%"
+    },
+    "Masconomet High School": {
+        "Tree Requests": "445",
+        "Tree Goal": "330",
+        "Tree Progress": "134.85%"
+    },
+    "Roslyn High School": {
+        "Tree Requests": "17",
+        "Tree Goal": "100",
+        "Tree Progress": "17.00%"
+    },
+    "Absegami High School": {
+        "Tree Requests": "180",
+        "Tree Goal": "250",
+        "Tree Progress": "72.00%"
+    },
+    "Poudre High School": {
+        "Tree Requests": "14",
+        "Tree Goal": "250",
+        "Tree Progress": "5.60%"
+    },
+    "Norwood High School": {
+        "Tree Requests": "26",
+        "Tree Goal": "200",
+        "Tree Progress": "13.00%"
+    },
+    "Montgomery High School": {
+        "Tree Requests": "1",
+        "Tree Goal": "170",
+        "Tree Progress": "0.59%"
+    },
+    "Downingtown East High School": {
+        "Tree Requests": "37",
+        "Tree Goal": "200",
+        "Tree Progress": "18.50%"
+    },
+    "Narragansett High School": {
+        "Tree Requests": "112",
+        "Tree Goal": "100",
+        "Tree Progress": "112.00%"
+    },
+    "Mashpee Middle High School": {
+        "Tree Requests": "41",
+        "Tree Goal": "100",
+        "Tree Progress": "41.00%"
+    },
+    "Mt. Hope High School": {
+        "Tree Requests": "76",
+        "Tree Goal": "160",
+        "Tree Progress": "47.50%"
+    },
+    "Aurora University": {
+        "Tree Requests": "11",
+        "Tree Goal": "265",
+        "Tree Progress": "4.15%"
+    },
+    "Mundelein High School": {
+        "Tree Requests": "156",
+        "Tree Goal": "400",
+        "Tree Progress": "39.00%"
+    },
+    "Glenbrook North High School": {
+        "Tree Requests": "31",
+        "Tree Goal": "284",
+        "Tree Progress": "10.92%"
+    },
+    "Richard Montgomery High School": {
+        "Tree Requests": "1",
+        "Tree Goal": "175",
+        "Tree Progress": "0.57%"
+    },
+    "Beverly High School": {
+        "Tree Requests": "74",
+        "Tree Goal": "200",
+        "Tree Progress": "37.00%"
+    },
+    "Watertown High School": {
+        "Tree Requests": "54",
+        "Tree Goal": "150",
+        "Tree Progress": "36.00%"
+    },
+    "Shepton High School": {
+        "Tree Requests": "6",
+        "Tree Goal": "265",
+        "Tree Progress": "2.26%"
+    },
+    "Nashua High School South": {
+        "Tree Requests": "222",
+        "Tree Goal": "275",
+        "Tree Progress": "80.73%"
+    },
+    "Lawn Ave Middle School": {
+        "Tree Requests": "166",
+        "Tree Goal": "100",
+        "Tree Progress": "166.00%"
+    },
+    "Andover High School": {
+        "Tree Requests": "263",
+        "Tree Goal": "256",
+        "Tree Progress": "102.73%"
+    },
+    "Livingston High School": {
+        "Tree Requests": "110",
+        "Tree Goal": "160",
+        "Tree Progress": "68.75%"
+    },
+    "Peak to Peak Charter School": {
+        "Tree Requests": "8",
+        "Tree Goal": "170",
+        "Tree Progress": "4.71%"
+    },
+    "Framingham High School": {
+        "Tree Requests": "271",
+        "Tree Goal": "210",
+        "Tree Progress": "129.05%"
+    },
+    "Lenox Memorial Middle and High School": {
+        "Tree Requests": "17",
+        "Tree Goal": "100",
+        "Tree Progress": "17.00%"
+    },
+    "Newark Charter Jr./Sr. High School": {
+        "Tree Requests": "35",
+        "Tree Goal": "235",
+        "Tree Progress": "14.89%"
+    },
+    "Harwood Union High School": {
+        "Tree Requests": "158",
+        "Tree Goal": "100",
+        "Tree Progress": "158.00%"
+    },
+    "Mansfield High School": {
+        "Tree Requests": "73",
+        "Tree Goal": "230",
+        "Tree Progress": "31.74%"
+    },
+    "Paramus High School": {
+        "Tree Requests": "59",
+        "Tree Goal": "245",
+        "Tree Progress": "24.08%"
+    },
+    "Kenwood Community School": {
+        "Tree Requests": "27",
+        "Tree Goal": "50",
+        "Tree Progress": "54.00%"
+    },
+    "North Andover High School": {
+        "Tree Requests": "89",
+        "Tree Goal": "275",
+        "Tree Progress": "32.36%"
+    },
+    "Lane Tech High School": {
+        "Tree Requests": "59",
+        "Tree Goal": "125",
+        "Tree Progress": "47.20%"
+    },
+    "Elk Grove High School": {
+        "Tree Requests": "55",
+        "Tree Goal": "55",
+        "Tree Progress": "100.00%"
+    }
+}

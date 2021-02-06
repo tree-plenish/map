@@ -10,7 +10,7 @@
     transition: text-decoration .5s;
     transition: text-color .5s;
     cursor: pointer;
-    margin-top:3px;
+    
 }
 .headertext:hover{
     text-decoration: underline;

@@ -10,12 +10,17 @@ def index():
 
 @app.route('/school')
 def school():
-    schoolName = request.args["school"]
-    return render_template("school.html", name=schoolName)
+    schoolName = request.args["school"].strip()
+    with open('schoolData.json', 'r') as f:
+        data = json.load(f)
+        treeReqs = data[schoolName]['Tree Requests']
+        treeGoal = data[schoolName]['Tree Goal']
+        prog = data[schoolName]['Tree Progress']
+    return render_template("school.html", name=schoolName, treeRequests = treeReqs, treeGoal =  treeGoal, progress=prog)
 
 @app.route('/analytics')
 def analytics():
-    return render_template("analytics.html")
+    return render_template("analytics.html") 
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0')
