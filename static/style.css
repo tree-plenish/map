@@ -21,3 +21,16 @@
     border: 3px solid;
     border-color: #31a354;
 }
+#progress-container{
+    background-color: rgb(192, 192, 192); 
+    width: 80%; 
+    border-radius: 15px; 
+}
+#progress-bar{
+    background-color: rgb(116, 194, 92);  
+    padding: 1%; 
+    text-align: right; 
+    font-size: 20px; 
+    border-radius: 15px;
+    width: 80%
+}

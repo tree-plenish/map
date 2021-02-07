@@ -11,12 +11,15 @@ def index():
 @app.route('/school')
 def school():
     schoolName = request.args["school"].strip()
-    with open('schoolData.json', 'r') as f:
-        data = json.load(f)
-        treeReqs = data[schoolName]['Tree Requests']
-        treeGoal = data[schoolName]['Tree Goal']
-        prog = data[schoolName]['Tree Progress']
-    return render_template("school.html", name=schoolName, treeRequests = treeReqs, treeGoal =  treeGoal, progress=prog)
+    try:
+        with open('schoolData.json', 'r') as f:
+            data = json.load(f)
+            treeReqs = data[schoolName]['Tree Requests']
+            treeGoal = data[schoolName]['Tree Goal']
+            prog = data[schoolName]['Tree Progress']
+        return render_template("school.html", name=schoolName, treeRequests = treeReqs, treeGoal =  treeGoal, progress=prog)
+    except:
+        return render_template("school_not_found.html")
 
 @app.route('/analytics')
 def analytics():

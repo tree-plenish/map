@@ -13,8 +13,15 @@
         <div class = "headertext" style="padding: 3px;margin-right:10px;margin-left:10px;color:white;" onclick='javascript:window.location.href=`analytics`;'>Analytics</div>
     </div>
     <h1>{{ name }}</h1>
-    <div>{{ treeRequests }}</div>
-    <div>{{ treeGoal }}</div>
-    <div>{{ progress }}</div>
+    <!-- <div>{{ treeRequests }}</div>
+    <div>{{ treeGoal }}</div> -->
+    <div id="progress-container" style="width:100%;height:50px;border:1px;">
+        <div id="progress-bar" style="background-color:green;height:50px;text-align:right;border:1px;font-size:20px;justify-content:center;">{{ progress }}</div>
+    </div>
+    <div>{{ treeRequests }} out of {{ treeGoal }}-tree goal</div>
+    <script>
+        var prog= '{{ progress }}';
+        document.getElementById("progress-bar").style.width=prog;
+    </script>
 </body>
 </html>
