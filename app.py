@@ -3,11 +3,13 @@ from flask import Flask, render_template, request, jsonify
 import json
 app = Flask(__name__)
 
+#home page
 @app.route('/index')
 @app.route('/')
 def index():
     return render_template("index.html")
 
+#school-specific pages
 @app.route('/school')
 def school():
     schoolName = request.args["school"].strip()
@@ -21,6 +23,7 @@ def school():
     except:
         return render_template("school_not_found.html")
 
+#full analytics page
 @app.route('/analytics')
 def analytics():
     return render_template("analytics.html") 

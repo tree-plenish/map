@@ -45,9 +45,8 @@
         <div id="mapid"></div>
         <script>
             
+            //creating the map object
             var theMap =  L.map('mapid').setView([42.3601, -71.0589], 5);
-            var clicked;
-
             L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
                 attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
                 maxZoom: 18,
@@ -56,15 +55,14 @@
                 zoomOffset: -1,
                 accessToken: 'pk.eyJ1Ijoiamg0MzM3IiwiYSI6ImNra2FqcTQzYTAza2oydW5hajM1cHpsZm0ifQ.8ulGEQ6aT3YmGoHNqeV83Q'
             }).addTo(theMap);
-            
             var TPmarker = L.marker([42.0335,-71.2191]).addTo(theMap);
-
+            TPmarker.bindPopup("<b>Tree-Plenish HQ</b>").openPopup();
+            //colors for the choropleth map
             function getColor(d) {
                 return d > thirdQuartile ? '#31a354':
                        d > firstQuartile  ? '#a1d99b':
                                         '#e5f5e0';
             }
-
             function style(feature) {
                 return {
                     fillColor: getColor(feature.properties.NUMSCHOOLS),
@@ -75,7 +73,21 @@
                     fillOpacity: 0.85
                 };
             }
-            
+            var geoJson = L.geoJson(statesData, {style: style, onEachFeature: onEachFeature}).addTo(theMap);
+
+            //this variable keeps track of which state is clicked on
+            var clicked;
+
+            //events for each state
+            function onEachFeature(feature, layer) {
+                layer.on({
+                    mouseover: highlightFeature,
+                    mouseout: resetHighlight,
+                    click: clickedFeature          
+                });
+
+            }
+            //hovering
             function highlightFeature(e) {
         
                 var layer = e.target;
@@ -91,27 +103,42 @@
                     layer.bringToFront();
                 }
 
-                //info.update(layer.feature.properties);
-            }     
+            }  
+            //off hover   
             function resetHighlight(e) {
                 if(clicked!=e.target)
                 {
                     geoJson.resetStyle(e.target);
                 }
                 
-                //info.update();
+                
                 return;
             }
 
-            function onEachFeature(feature, layer) {
-                layer.on({
-                    mouseover: highlightFeature,
-                    mouseout: resetHighlight,
-                    click: clickedFeature          
-                });
-
+            //info for each state
+            var info = L.control(); 
+            info.onAdd = function (map) {
+                this._div = L.DomUtil.create('div', 'info');
+                this.update();
+                return this._div;
+            };
+            function buildString(school){
+                return( "goToSchool(" + "\'" + school + "\'" + ")");
+                
             }
-
+            function buildHTML(schoolList){
+                var theSchools = "";
+                schoolList.forEach(school => theSchools = theSchools + "<div class=" + "\"" + "schoolLink" + "\"" + "onclick=" + "\"" + buildString(school) + "\"" + ">" + school + "</div><br>");
+                return theSchools;
+            }
+            info.update = function (props) {
+                this._div.innerHTML = '<h4>Schools:</h4>' +  (props ?
+                '<div>' + buildHTML(props.SCHOOLS) + '</div>'
+                : 'Click on a state');
+            };
+            info.addTo(theMap);
+            
+            //when a state is clicked
             function clickedFeature(e){
                 clicked = e.target;
                 geoJson.resetStyle()
@@ -120,42 +147,11 @@
                 info.update(layer.feature.properties)
 
             }
-
-            var info = L.control();
-            
-            info.onAdd = function (map) {
-                this._div = L.DomUtil.create('div', 'info');
-                this.update();
-                return this._div;
-            };
-
             function goToSchool(theSchool){
                 console.log(theSchool);
                 window.location.href = `school?school=${theSchool}`;
             }
             
-            function buildString(school){
-                return( "goToSchool(" + "\'" + school + "\'" + ")");
-                
-            }
-
-            function buildHTML(schoolList){
-                var theSchools = "";
-                schoolList.forEach(school => theSchools = theSchools + "<div class=" + "\"" + "schoolLink" + "\"" + "onclick=" + "\"" + buildString(school) + "\"" + ">" + school + "</div><br>");
-                return theSchools;
-            }
-
-            info.update = function (props) {
-                this._div.innerHTML = '<h4>Schools:</h4>' +  (props ?
-                '<div>' + buildHTML(props.SCHOOLS) + '</div>'
-                : 'Hover over a state');
-            };
-            
-            var geoJson = L.geoJson(statesData, {style: style, onEachFeature: onEachFeature}).addTo(theMap);
-
-            TPmarker.bindPopup("<b>Tree-Plenish HQ</b>").openPopup();
-            
-            info.addTo(theMap);
         </script>
     </body>
 </html>

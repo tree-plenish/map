@@ -15,10 +15,9 @@
     <h1>{{ name }}</h1>
     <!-- <div>{{ treeRequests }}</div>
     <div>{{ treeGoal }}</div> -->
-    <div id="progress-container" style="width:100%;height:50px;border-radius:3px;background-color:gray;">
+    <div id="progress-container" style="margin:20px;width:80%;height:50px;border-radius:3px;background-color:gray;">
         <div id="progress-bar" style="background-color:green;height:50px;text-align:right;border-radius:3px;font-size:20px;color:white;justify-content:center;">{{ progress }}</div>
     </div>
-    <br>
     <div>{{ treeRequests }} out of {{ treeGoal }}-tree goal</div>
     <script>
         var prog= '{{ progress }}';
