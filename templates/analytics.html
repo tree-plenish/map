@@ -5,6 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/style.css"/>
     <title>Document</title>
+    <style>
+        .grid{
+            display:grid;
+            padding: 10px;
+            grid-template-columns: 1fr;
+            grid-template-rows: 120px 300px 300px; 
+            
+        }
+        .row{
+            background-color: #a1d99b;
+        }
+        #quick-stats{
+            display:grid;
+            justify-content: center;
+            grid-template-columns: 1fr 1fr;
+        }
+        #big-stats1{
+            display:grid;
+            justify-content: center;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        #big-stats2{
+            display:grid;
+            justify-content: center;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    </style>
 </head>
 <body>
     <div class="header">
@@ -12,17 +40,22 @@
         <div class = "headertext" style="padding: 3px;color:white;" onclick='javascript:window.location.href=`index`;'>Home</div>
         <div class = "headertext" style="padding: 3px;margin-right:10px;margin-left:10px;color:white;" onclick='javascript:window.location.href=`analytics`;'>Analytics</div>
     </div>
-    <h1>Tree-Plenish Analytics</h1>
+    <h1>Analytics</h1>
     <div class="grid">
-        <div class="row" id="quick-stats">
+        <div class=row id="quick-stats">
             <div id="pollutants">pollutants absorbed: </div>
             <div id="paper">paper saved: </div>
+            
         </div>
         <div class="row" id="big-stats1">
-            
+            <div>test</div>
+            <div>test</div>
+            <div>test</div>
         </div>
         <div class="row" id="big-stats2">
-            
+            <div>test</div>
+            <div>test</div>
+            <div>test</div>
         </div>
     </div>
 </body>
