@@ -14,7 +14,7 @@ def index():
 def school():
     schoolName = request.args["school"].strip()
     try:
-        with open('schoolData.json', 'r') as f:
+        with open('./static/schoolData.json', 'r') as f:
             data = json.load(f)
             treeReqs = data[schoolName]['Tree Requests']
             treeGoal = data[schoolName]['Tree Goal']

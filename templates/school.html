@@ -3,18 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/style.css"/>
+    <!-- <link rel="stylesheet" href="../static/style.css"/> -->
     <title>Document</title>
+    <style>
+        .header{
+            display: grid; 
+            grid-template-columns: 4fr 1fr; 
+            padding: 15px;
+            background-color: #a1d99b;
+            font: 15px Arial, Helvetica, sans-serif;
+            border-radius: 5px;
+            min-width:960px;
+        }
+        .links{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .headertext{
+            transition: text-decoration .5s;
+            transition: text-color .5s;
+            cursor: pointer;
+            color:white;
+            margin-left: 5px;
+        }   
+        .headertext:hover{
+            text-decoration: underline;
+            color: black;
+        }
+        .treeplenish{
+            color:white;
+        }
+    </style>
 </head>
 <body>
     <div class="header">
-        <div class="tree-plenish" style="padding:3px;margin-right:1075px;color:white;background-color:#31a354;">Tree-Plenish.</div>
-        <div class = "headertext" style="padding: 3px;color:white;" onclick='javascript:window.location.href=`index`;'>Home</div>
-        <div class = "headertext" style="padding: 3px;margin-right:10px;margin-left:10px;color:white;" onclick='javascript:window.location.href=`analytics`;'>Analytics</div>
+        <div class="treeplenish">Tree-Plenish.</div>
+        <div class="links">
+            <div class = "headertext"onclick='javascript:window.location.href=`index`;'>Home</div>
+            <div class = "headertext" onclick='javascript:window.location.href=`analytics`;'>Analytics</div>
+        </div>
     </div>
     <h1>{{ name }}</h1>
-    <!-- <div>{{ treeRequests }}</div>
-    <div>{{ treeGoal }}</div> -->
     <div id="progress-container" style="margin:20px;width:80%;height:50px;border-radius:3px;background-color:gray;">
         <div id="progress-bar" style="background-color:green;height:50px;text-align:right;border-radius:3px;font-size:20px;color:white;justify-content:center;">{{ progress }}</div>
     </div>

@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
         integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
         crossorigin=""/>
-        <link rel="stylesheet" href="../static/style.css"/>
+        <!-- <link rel="stylesheet" href="../static/style.css"/> -->
         <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossorigin=""></script>
@@ -33,18 +33,48 @@
             .schoolLink:hover{
                 text-decoration: underline;
             }
-           
+            .header{
+                display: grid; 
+                grid-template-columns: 4fr 1fr; 
+                padding: 15px;
+                background-color: #a1d99b;
+                font: 15px Arial, Helvetica, sans-serif;
+                /* justify-content: flex-end; */
+                border-radius: 5px;
+                /* position: relative; */
+                /* min-width:1000px; */
+}
+            .links{
+                display:grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            .headertext{
+                transition: text-decoration .5s;
+                transition: text-color .5s;
+                cursor: pointer;
+                color:white;
+                /* margin-left: 5px; */
+            } 
+            .headertext:hover{
+                text-decoration: underline;
+                color: black;
+            }
+            .treeplenish{
+                color:white;
+            } 
         </style>
     </head>
     <body>
         <div class="header">
-            <div class="tree-plenish" style="padding:3px;margin-right:1075px;color:white;background-color:#31a354;">Tree-Plenish.</div>
-            <div class = "headertext" style="padding: 3px;color:white;" onclick='javascript:window.location.href=`index`;'>Home</div>
-            <div class = "headertext" style="padding: 3px;margin-right:10px;margin-left:10px;color:white;" onclick='javascript:window.location.href=`analytics`;'>Analytics</div>
+            <div class="treeplenish">Tree-Plenish.</div>
+            <div class="links">
+                <div class = "headertext"onclick='javascript:window.location.href=`index`;'>Home</div>
+                <div class = "headertext" onclick='javascript:window.location.href=`analytics`;'>Analytics</div>
+            </div>
         </div>
         <div id="mapid"></div>
+        
         <script>
-            
             //creating the map object
             var theMap =  L.map('mapid').setView([42.3601, -71.0589], 5);
             L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
