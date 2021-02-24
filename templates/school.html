@@ -33,6 +33,29 @@
         .treeplenish{
             color:white;
         }
+        .grid{
+            display:grid;
+            padding: 10px;
+            grid-template-columns: 1fr;
+            grid-template-rows: 120px 300px 300px; 
+            grid-gap: 5px;
+        }
+        .row{
+            background-color: #a1d99b;
+            grid-gap: 3px;
+        }
+        #quick-stats{
+            display:grid;
+            justify-content: center;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap:3px;
+        }
+        #big-stats{
+            display:grid;
+            justify-content: center;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap:3px;
+        }
     </style>
 </head>
 <body>
@@ -48,6 +71,20 @@
         <div id="progress-bar" style="background-color:green;height:50px;text-align:right;border-radius:3px;font-size:20px;color:white;justify-content:center;">{{ progress }}</div>
     </div>
     <div>{{ treeRequests }} out of {{ treeGoal }}-tree goal</div>
+    <div class="grid">
+        <div class="row" id="school-info">
+            school demographics/info
+        </div>
+        <div class="row" id="quick-stats">
+            <div id="pollutants">pollutants absorbed: </div>
+            <div id="paper">paper saved: </div>
+        </div>
+        <div class="row" id="big-stats">
+            <div>test</div>
+            <div>test</div>
+            <div>test</div>
+        </div>
+    </div>
     <script>
         var prog= '{{ progress }}';
         if(parseInt(prog.split("%")[0])>100){
