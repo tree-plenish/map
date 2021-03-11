@@ -23,6 +23,21 @@ def school():
     except:
         return render_template("school_not_found.html")
 
+# version 2
+# @app.route('/school')
+# def school():
+#     schoolName = request.args["school"].strip()
+#     filePath = "../static/allSchoolData.json"
+#     try:
+#         with open(filePath, 'r') as f:
+#             data = json.load(f)[schoolName]
+#             #get data and give it to the template in the form of a dictionary
+#             schoolData = {}
+#             #blah blah code blah blah
+#             render_template("school.html", schoolData)
+#     except:
+#         return render_template("school_not_found.html")
+
 #full analytics page
 @app.route('/analytics')
 def analytics():
