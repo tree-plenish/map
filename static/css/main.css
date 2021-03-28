@@ -1,0 +1,243 @@
+body{
+    margin: 0px;
+    font-family: 'Montserrat', Arial,Helvetica,sans-serif;
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+}
+
+#topnav{
+    z-index: 100;
+}
+#topnav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #016d30;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    color: white;
+    font-size: 3.5vw;
+}
+#topnav ul li{
+    display: inline;
+    float: left;
+    padding: 5%;
+}
+#topnav-title{
+    background-color: #80ba52;
+    font-weight: bold;
+}
+#topnav ul li a:link, a:active, a:hover, a:visited{
+    color: white;
+}
+@media screen and (min-width: 500px) {/*large screens*/
+    #topnav ul {
+        font-size: 1.1em;
+    }
+    #topnav ul li {
+        padding: 20px;
+    }
+}
+#main{
+    text-align: center;
+    margin-top:60px;
+}
+#main-header{
+    
+    background-image: url(../images/leaves.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+#main-header h1{
+    padding: 5%;
+    margin: 0;
+    background-color: rgba(54, 83, 79, 0.678);
+}
+
+hr{
+    border: 0;
+    border-top: 1px solid white;
+}
+
+
+.button{
+    transition: 0.5s;
+    padding: 10px 20px;
+    border: none;
+    background-color: #80ba52;
+    color: white;
+    display: block;
+    font-size: 1em;
+    padding: 2% 4%;
+    margin: 4%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #80ba52;
+}
+.button:hover{
+    background-color: rgba(0,0,0,0);
+    border-color: white;
+    
+}
+
+#footer{
+    text-align: center;
+    background-color: #016d30;
+    padding: 40px;
+    position: relative;
+    bottom: 0;
+    /* height: 100px; */
+    margin: 0;
+    color:#80ba52;
+}
+#footer h1{
+    color: white;
+}
+.circleCropper{
+    width: 200px;
+    height: 200px;
+    /* position: relative; */
+    overflow: hidden;
+    border-radius: 50%;
+    margin: auto;
+}
+.landscape{
+    height: 100%;
+    width: auto;
+}
+.portrait{
+    height: auto;
+    width: 100%;
+}
+.profileImg{
+    display: inline;
+    margin: 0 auto;
+    
+}
+/* tree cards (Stiff cards) */
+.stiffCards{
+    padding: 6% 2%;
+}
+.stiffCards h1{
+    padding: 5%;
+}
+.stiffCard{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin: 10px;
+    width: 250px;
+    border-radius: 6px;
+    display: inline-block;
+    
+}
+.stiffCard:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.stiffCard .button:hover{
+    background-color:#016d30;
+}
+.container {
+    padding: 2px 16px;
+}
+.overImage{
+    background-color: rgba(0, 0, 0, 0.404);
+    color: white;
+    padding: 100px 15%;
+    
+}
+
+.divHead{
+    margin-top: 5%;
+    font-size: 60px;
+}
+/* Flexbox styling for cards */
+
+.card {
+	background: white;
+	margin-bottom: 2em;	
+}
+
+.card a {
+	color: black;
+	text-decoration: none;
+}
+
+.card a:hover {
+	box-shadow: 3px 3px 8px hsl(0, 0%, 80%);
+}
+
+.card-content {
+	padding: 1.4em;
+}
+
+.card-content h2 {
+	margin-top: 0;
+	margin-bottom: .5em;
+	font-weight: bold;
+}
+
+.card-content p {
+	font-size: 80%;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3% 8%;
+ }
+/*1 card*/
+.card {
+    flex: 1 0 250px; /*size on small screens*/
+    box-sizing: border-box;
+    margin: 1rem .25em;
+    padding: 0 2%;
+}
+/*2 cards*/
+@media screen and (min-width: 45em) {
+    .card .min2 { /*only apply 2 cards per row if min 2 team members*/
+       max-width: calc(50% -  1em);
+    }
+}
+/*3 cards*/ 
+@media screen and (min-width: 68em) {
+    .card .min3 { /*only apply 3 cards per row if min 3 team members*/
+        max-width: calc(34% - 1em);
+    }
+}
+
+.centered {
+    margin: 0 auto; 
+    padding: 0 1em;
+}
+
+@media screen and (min-width: 70em) {
+    .centered {
+        max-width: 70em;
+    }
+}
+/* for two-flexbox layout */
+.split{
+    display: flex;
+    flex-wrap: wrap;
+}
+.half{
+    flex: 1 0 100%; /*size on small screens*/
+    box-sizing: border-box;
+    padding: 8%;
+    font-size: 1.3em;
+}
+/*2 cards*/
+@media screen and (min-width: 850px) {
+    .half {
+       max-width: 50%;
+       font-size: 1.5vw;
+       padding: 5%
+    }
+}
