@@ -57,8 +57,9 @@ a{
     color: white;
 }
 #main-header h1{
-    padding: 5%;
+    padding: 6%;
     margin: 0;
+    font-size: 2.5em;
     background-color: rgba(54, 83, 79, 0.678);
 }
 
@@ -240,4 +241,11 @@ hr{
        font-size: 1.5vw;
        padding: 5%
     }
+}
+.large-stats div{
+    padding: 5%;
+    font-size: 1.2em;
+}
+.large-stats{
+    background-color: #80ba52;
 }
