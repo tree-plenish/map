@@ -11,26 +11,30 @@
             padding: 10px;
             grid-template-columns: 1fr;
             grid-template-rows: 120px 300px 300px; 
-            
+            grid-gap: 5px;
         }
         .row{
             background-color: #a1d99b;
+            grid-gap: 3px;
         }
         #quick-stats{
             display:grid;
             justify-content: center;
             grid-template-columns: 1fr 1fr;
+            grid-column-gap:3px;
         }
         #big-stats1{
             display:grid;
             justify-content: center;
             grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap:3px;
         }
 
         #big-stats2{
             display:grid;
             justify-content: center;
             grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap:3px;
         }
         .header{
             display: grid; 
@@ -72,12 +76,14 @@
     <h1>Analytics</h1>
     <div class="grid">
         <div class=row id="quick-stats">
-            <div id="pollutants">pollutants absorbed: </div>
-            <div id="paper">paper saved: </div>
+            <div id="pollutants">pollutants absorbed: { data.pollutantsAbs } </div>
+            <div id="paper">paper saved: { data.paperSaved }</div>
             
         </div>
         <div class="row" id="big-stats1">
-            <div>test</div>
+            <div>Donation Sizes
+                
+            </div>
             <div>test</div>
             <div>test</div>
         </div>

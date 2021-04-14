@@ -1,0 +1,5 @@
+{
+    "Arlington (NY) High School": {"name": "Arlington (NY) High School",
+                                    "requests":[{"total": 17, "date": "2020-01-01"},
+                                                {"total": 15, "date":"2020-01-05"}]}
+}

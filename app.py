@@ -30,9 +30,10 @@ def school():
 #     filePath = "../static/allSchoolData.json"
 #     try:
 #         with open(filePath, 'r') as f:
-#             data = json.load(f)[schoolName]
+#             data = json.load(f)[schoolName].read_json
 #             #get data and give it to the template in the form of a dictionary
 #             schoolData = {}
+#          
 #             #blah blah code blah blah
 #             render_template("school.html", schoolData)
 #     except:
