@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="../static/style.css"/> -->
-    <title>Document</title>
-    <style>
+{% extends 'base.html' %}
+{% block head %}
+    <!-- <style>
         .grid{
             display:grid;
             padding: 10px;
@@ -63,22 +58,58 @@
         .treeplenish{
             color:white;
         }
-    </style>
-</head>
-<body>
-    <div class="header">
-        <div class="treeplenish">Tree-Plenish.</div>
-        <div class="links">
-            <div class = "headertext"onclick='javascript:window.location.href=`index`;'>Home</div>
-            <div class = "headertext" onclick='javascript:window.location.href=`analytics`;'>Analytics</div>
+    </style> -->
+{% endblock %}
+{% block body %}
+    <div id="main-header"> 
+        <h1>Analytics</h1>
+    </div>
+    <div class="split large-stats">
+        <div class="half" >
+            <h2>Pollutants Absorbed</h2>
+            <h2>##</h2>
+        </div>
+        <div class="half">
+            <h2>Paper Saved</h2>
+            <h2>##</h2> 
         </div>
     </div>
-    <h1>Analytics</h1>
-    <div class="grid">
+    <div class="cards">
+        <div class="card">
+            <h2>test</h2>
+            <p>############## ############  ################# ############### </p>
+        </div>
+        <div class="card">
+            <h2>test</h2>
+            <p>############## ############ ############### ################# ############### </p>
+        </div>
+        <div class="card">
+            <h2>test</h2>
+            <p>############## ############ ############### ################# ############### </p>
+        </div>
+        <div class="card">
+            <h2>test</h2>
+            <p>############## ############ ############### ################# ############### </p>
+        </div>
+        <div class="card">
+            <h2>test</h2>
+            <p>############## ############ ############### ################# ############### </p>
+        </div>
+        <div class="card">
+            <h2>test</h2>
+            <p>############## ############ ############### ################# ############### </p>
+        </div>
+    </div>
+    <!-- <div class="grid">
         <div class=row id="quick-stats">
+<<<<<<< HEAD
             <div id="pollutants">pollutants absorbed: { data.pollutantsAbs } </div>
             <div id="paper">paper saved: { data.paperSaved }</div>
             
+=======
+            <div id="pollutants">pollutants absorbed: </div>
+            <div id="paper">paper saved: </div>
+>>>>>>> 0edc989ceaa62bd6f3a3ed358f622399c7db33b8
         </div>
         <div class="row" id="big-stats1">
             <div>Donation Sizes
@@ -92,6 +123,5 @@
             <div>test</div>
             <div>test</div>
         </div>
-    </div>
-</body>
-</html>
+    </div> -->
+{% endblock %}
