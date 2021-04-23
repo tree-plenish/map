@@ -1,6 +1,6 @@
 # map
 Issues:
-- website header gets squashed for smaller window sizes --> gotta fix the html and css for this because it's messy
+- website header gets squashed for smaller window sizes --> fixed with responsive navbar
 Next steps:
 - put school-specific data on their pages
 - add a main analytics page w aggregate data from all schools

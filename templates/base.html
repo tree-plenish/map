@@ -6,15 +6,20 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <!-- icon library to show a hamburger menu on small screens for navbar -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     {% block head %}{% endblock %}
   </head>
   <body>
-    <div id="topnav">
+    <div class="nav" id="topnav">
         <ul>
-            <a href="https://tree-plenish.org"><li id="topnav-title">Tree-Plenish.</li></a>
-            <li>School Name</li>
-            <li class = "headertext"onclick='javascript:window.location.href=`index`;'>Home</li>
-            <li class = "headertext" onclick='javascript:window.location.href=`analytics`;'>Analytics</li>
+            <li id="topnav-title"><a href="https://tree-plenish.org">Tree-Plenish.</a></li>
+            <li><b>School Name</b></li>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('analytics') }}">Analytics</a></li>
+            <a href="javascript:void(0);" class="icon" onclick="expandNavbar()">
+              <i class="fa fa-bars"></i>
+            </a>
         </ul>
         
     </div>
@@ -25,6 +30,7 @@
       <h1>A community effort to increase sustainability.</h1>
       <h2>Tree-Plenish.</h2>
     </div>
+    <script src="{{ url_for('static', filename='base.js') }}"></script>
     {% block scripts %}{% endblock %}
   </body>
 </html>
