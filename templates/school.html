@@ -1,90 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="../static/style.css"/> -->
-    <title>Document</title>
-    <style>
-        .header{
-            display: grid; 
-            grid-template-columns: 4fr 1fr; 
-            padding: 15px;
-            background-color: #a1d99b;
-            font: 15px Arial, Helvetica, sans-serif;
-            border-radius: 5px;
-            min-width:960px;
-        }
-        .links{
-            display:grid;
-            grid-template-columns: 1fr 1fr;
-        }
-        .headertext{
-            transition: text-decoration .5s;
-            transition: text-color .5s;
-            cursor: pointer;
-            color:white;
-            margin-left: 5px;
-        }   
-        .headertext:hover{
-            text-decoration: underline;
-            color: black;
-        }
-        .treeplenish{
-            color:white;
-        }
-        .grid{
-            display:grid;
-            padding: 10px;
-            grid-template-columns: 1fr;
-            grid-template-rows: 120px 300px 300px; 
-            grid-gap: 5px;
-        }
-        .row{
-            background-color: #a1d99b;
-            grid-gap: 3px;
-        }
-        #quick-stats{
-            display:grid;
-            justify-content: center;
-            grid-template-columns: 1fr 1fr;
-            grid-column-gap:3px;
-        }
-        #big-stats{
-            display:grid;
-            justify-content: center;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-column-gap:3px;
-        }
-    </style>
-</head>
-<body>
-    <div class="header">
-        <div class="treeplenish">Tree-Plenish.</div>
-        <div class="links">
-            <div class = "headertext"onclick='javascript:window.location.href=`index`;'>Home</div>
-            <div class = "headertext" onclick='javascript:window.location.href=`analytics`;'>Analytics</div>
-        </div>
+{% extends 'base.html' %}
+
+{% block head %}
+<title>{{ name }} Analytics</title>
+{% endblock %}
+
+<!-- {% block navbar %}<li><b>{{ name }}</b></li>{% endblock %} -->
+
+{% block body %}
+    
+    <div id="main-header"> 
+        <h1>{{ name }}</h1>
     </div>
-    <h1>{{ name }}</h1>
-    <div id="progress-container" style="margin:20px;width:80%;height:50px;border-radius:3px;background-color:gray;">
+
+    <h2 style="margin-top:5%">{{ treeRequests }} out of {{ treeGoal }}-tree goal</h2>
+    <div id="progress-container" style="display:inline-block;margin:20px;width:80%;height:50px;border-radius:3px;background-color:gray;">
         <div id="progress-bar" style="background-color:green;height:50px;text-align:right;border-radius:3px;font-size:20px;color:white;justify-content:center;">{{ progress }}</div>
     </div>
-    <div>{{ treeRequests }} out of {{ treeGoal }}-tree goal</div>
-    <div class="grid">
-        <div class="row" id="school-info">
-            school demographics/info
+    <div class="cards">
+        <div class="card">
+            <h2>school demographics 1</h2>
+            <p>############## ############  ################# ############### </p>
         </div>
-        <div class="row" id="quick-stats">
-            <div id="pollutants">pollutants absorbed: </div>
-            <div id="paper">paper saved: </div>
+        <div class="card">
+            <h2>school demographics 2</h2>
+            <p>############## ############ ############### ################# ############### </p>
         </div>
-        <div class="row" id="big-stats">
-            <div>test</div>
-            <div>test</div>
-            <div>test</div>
+        <div class="card">
+            <h2>more school info, etc.</h2>
+            <p>############## ############ ############### ################# ############### </p>
         </div>
     </div>
+    <div class="split large-stats">
+        <div class="half" >
+            <h2>Pollutants Absorbed</h2>
+            <h2>##</h2>
+        </div>
+        <div class="half">
+            <h2>Paper Saved</h2>
+            <h2>##</h2> 
+        </div>
+    </div>
+    <div class="cards">
+        <div class="card">
+            <h2>test</h2>
+            <p>############## ############  ################# ############### </p>
+        </div>
+        <div class="card">
+            <h2>test</h2>
+            <p>############## ############ ############### ################# ############### </p>
+        </div>
+        <div class="card">
+            <h2>test</h2>
+            <p>############## ############ ############### ################# ############### </p>
+        </div>
+        <div class="card">
+            <h2>test</h2>
+            <p>############## ############ ############### ################# ############### </p>
+        </div>
+        <div class="card">
+            <h2>test</h2>
+            <p>############## ############ ############### ################# ############### </p>
+        </div>
+        <div class="card">
+            <h2>test</h2>
+            <p>############## ############ ############### ################# ############### </p>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+
     <script>
         var prog= '{{ progress }}';
         if(parseInt(prog.split("%")[0])>100){
@@ -92,5 +78,4 @@
         }
         document.getElementById("progress-bar").style.width=prog;
     </script>
-</body>
-</html>
+{% endblock %}

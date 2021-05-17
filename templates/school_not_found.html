@@ -1,47 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error</title>
-    <style>
-        .header{
-            display: grid; 
-            grid-template-columns: 4fr 1fr; 
-            padding: 15px;
-            background-color: #a1d99b;
-            font: 15px Arial, Helvetica, sans-serif;
-            border-radius: 5px;
-            min-width:960px;
-        }
-        .links{
-            display:grid;
-            grid-template-columns: 1fr 1fr;
-        }
-        .headertext{
-            transition: text-decoration .5s;
-            transition: text-color .5s;
-            cursor: pointer;
-            color:white;
-            margin-left: 5px;
-        }   
-        .headertext:hover{
-            text-decoration: underline;
-            color: black;
-        }
-        .treeplenish{
-            color:white;
-        }
-    </style>
-</head>
-<body>
-    <div class="header">
-        <div class="treeplenish">Tree-Plenish.</div>
-        <div class="links">
-            <div class = "headertext"onclick='javascript:window.location.href=`index`;'>Home</div>
-            <div class = "headertext" onclick='javascript:window.location.href=`analytics`;'>Analytics</div>
-        </div>
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Error</title>
+{% endblock %}
+
+{% block body %}
+    
+    <div id="main-header"> 
+        <h1>School Data Unavailable. Did you mean to type "{{ name }}"?</h1>
     </div>
-    <h1>School Data Unavailable</h1>
-</body>
-</html>
+
+
+{% endblock %}

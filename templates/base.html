@@ -14,9 +14,10 @@
     <div class="nav" id="topnav">
         <ul>
             <li id="topnav-title"><a href="https://tree-plenish.org">Tree-Plenish.</a></li>
-            <li><b>School Name</b></li>
+            
+            <!-- {% block navbar %}{% endblock %} -->
             <li><a href="{{ url_for('index') }}">Home</a></li>
-            <li><a href="{{ url_for('analytics') }}">Analytics</a></li>
+            <li><a href="{{ url_for('analytics') }}">Overall Analytics</a></li>
             <a href="javascript:void(0);" class="icon" onclick="expandNavbar()">
               <i class="fa fa-bars"></i>
             </a>

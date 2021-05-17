@@ -21,7 +21,7 @@ def school():
             prog = data[schoolName]['Tree Progress']
         return render_template("school.html", name=schoolName, treeRequests = treeReqs, treeGoal =  treeGoal, progress=prog)
     except:
-        return render_template("school_not_found.html")
+        return render_template("school_not_found.html", name=schoolName)
 
 # version 2
 # @app.route('/school')
